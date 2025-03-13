@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경 (진행되지 않은 부분) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" />
+            <solid android:color="#F1F0E8" />
+        </shape>
+    </item>
+
+    <!-- 진행 막대 (그라데이션 + 둥근 모서리) -->
+    <item>
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="12dp" />
+                <solid android:color="#89A8B2" />
+
+            </shape>
+        </clip>
+    </item>
+</layer-list>
