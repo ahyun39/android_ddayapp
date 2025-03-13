@@ -131,15 +131,80 @@ D-Day Application은 사용자가 중요한 일정과 기념일을 쉽게 관리
 
 ### 📲 갤럭시 S20 실행 화면  
 
-| **아이콘 & 메인화면** | **일정 목록 & 수정** | **일정 삭제 & 대표 일정 설정** |
-|----------------------|---------------------|--------------------------|
-| **▶️ 디데이앱 아이콘**<br>![img1](https://github.com/user-attachments/assets/de694bfe-e5bc-4767-839e-0c27e0cae9b7) | **▶️ 일정 목록**<br>![img3](https://github.com/user-attachments/assets/92346d0f-8599-4246-b22a-ccd9637ae48d) | **▶️ 일정 삭제**<br>![img5](https://github.com/user-attachments/assets/206c3ade-9e4f-49c0-822b-e43fc6fabb2f) | 
-| **▶️ 메인 화면**<br>![img2](https://github.com/user-attachments/assets/4ad41dbe-b36e-4fdf-bfd9-2003acfeb91a) | **▶️ 일정 수정**<br>![img4](https://github.com/user-attachments/assets/2dcbd218-7292-4dcc-8c92-ee86e2a5c81f) | **▶️ 대표 일정 설정**<br>![img6](https://github.com/user-attachments/assets/83cdb2d5-7aa3-4d44-a173-1189840a60b0) |
+<table>
+  <tr>
+    <th>아이콘 & 메인화면</th>
+    <th>일정 목록 & 수정</th>
+    <th>일정 삭제 & 대표 일정 설정</th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <br>▶️ 디데이앱 아이콘<br><br>
+      <img src="https://github.com/user-attachments/assets/de694bfe-e5bc-4767-839e-0c27e0cae9b7" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 일정 목록<br><br>
+      <img src="https://github.com/user-attachments/assets/92346d0f-8599-4246-b22a-ccd9637ae48d" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 일정 삭제<br><br>
+      <img src="https://github.com/user-attachments/assets/206c3ade-9e4f-49c0-822b-e43fc6fabb2f" width="200">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <br>▶️ 메인 화면<br><br>
+      <img src="https://github.com/user-attachments/assets/4ad41dbe-b36e-4fdf-bfd9-2003acfeb91a" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 일정 수정<br><br>
+      <img src="https://github.com/user-attachments/assets/2dcbd218-7292-4dcc-8c92-ee86e2a5c81f" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 대표 일정 설정<br><br>
+      <img src="https://github.com/user-attachments/assets/83cdb2d5-7aa3-4d44-a173-1189840a60b0" width="200">
+    </td>
+  </tr>
+</table>
 
-| **대표 일정 & 위젯 설정** | **위젯 선택 & 화면 표시** | **위젯 추가 & 크기 조절** |
-|------------------------|-----------------------|------------------------|
-| **▶️ 대표 일정 상단 위치**<br>![img7](https://github.com/user-attachments/assets/3ad928d9-949e-4a15-aa05-4b4962bbad4d) | **▶️ 위젯에 표시될 일정 선택**<br>![img9](https://github.com/user-attachments/assets/76c3e94a-5c40-401d-bc0c-d2206477584a) | **▶️ 위젯 여러 개 생성 가능**<br>![img11](https://github.com/user-attachments/assets/0a91e951-b334-46fd-8968-c5dc0914a2ea) |
-| **▶️ 위젯 설정 가능**<br>![img8](https://github.com/user-attachments/assets/d9fa8df0-30c7-47f5-a264-b594fea26df1) | **▶️ 위젯 화면**<br>![img10](https://github.com/user-attachments/assets/4642f095-3468-4a04-849c-930ff877f394) | **▶️ 위젯 가로 사이즈 조절**<br>![img12](https://github.com/user-attachments/assets/4ceb645e-1674-4457-ab88-ecb99af740b8) |
+<br>
+
+<table>
+  <tr>
+    <th>대표 일정 & 위젯 설정</th>
+    <th>위젯 선택 & 화면 표시</th>
+    <th>위젯 추가 & 크기 조절</th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <br>▶️ 대표 일정 상단 위치<br><br>
+      <img src="https://github.com/user-attachments/assets/3ad928d9-949e-4a15-aa05-4b4962bbad4d" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 위젯에 표시될 일정 선택<br><br>
+      <img src="https://github.com/user-attachments/assets/76c3e94a-5c40-401d-bc0c-d2206477584a" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 위젯 여러 개 생성 가능<br><br>
+      <img src="https://github.com/user-attachments/assets/0a91e951-b334-46fd-8968-c5dc0914a2ea" width="200">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <br>▶️ 위젯 설정 가능<br><br>
+      <img src="https://github.com/user-attachments/assets/d9fa8df0-30c7-47f5-a264-b594fea26df1" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 위젯 화면<br><br>
+      <img src="https://github.com/user-attachments/assets/4642f095-3468-4a04-849c-930ff877f394" width="200">
+    </td>
+    <td valign="top">
+      <br>▶️ 위젯 가로 사이즈 조절<br><br>
+      <img src="https://github.com/user-attachments/assets/4ceb645e-1674-4457-ab88-ecb99af740b8" width="200">
+    </td>
+  </tr>
+</table>
+
 
 📌 **[앱 아이콘 이미지 출처](https://m.blog.naver.com/jobobo12/223115307453)**
 
