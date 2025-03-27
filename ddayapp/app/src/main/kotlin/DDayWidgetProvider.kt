@@ -39,22 +39,25 @@ class DDayWidgetProvider : AppWidgetProvider() {
             val sharedPreferences = context.getSharedPreferences("widget_prefs", Context.MODE_PRIVATE)
             val eventTitle = sharedPreferences.getString("widget_${appWidgetId}_title", "일정 없음")
             val eventDateStr = sharedPreferences.getString("widget_${appWidgetId}_date", null)
+            val startDateStr = sharedPreferences.getString("widget_${appWidgetId}_sdate", null)
 
             var dDayText = "날짜 없음"
             var progress = 0
             var percent = "0%"
 
-            if (!eventDateStr.isNullOrEmpty()) {
+            if (!eventDateStr.isNullOrEmpty() && !startDateStr.isNullOrEmpty()) {
                 try {
                     val today = LocalDate.now()
                     val eventDate = LocalDate.parse(eventDateStr, DateTimeFormatter.ISO_LOCAL_DATE)
+                    val startDate = LocalDate.parse(startDateStr, DateTimeFormatter.ISO_LOCAL_DATE)
                     val daysLeft = ChronoUnit.DAYS.between(today, eventDate)
 
                     dDayText = if (daysLeft >= 0) "D-$daysLeft" else "D+${-daysLeft}"
 
                     // Progress 계산
-                    val totalDays = ChronoUnit.DAYS.between(eventDate.minusDays(100), eventDate).toInt()
-                    progress = ((100 - daysLeft) * 100 / totalDays).coerceIn(0, 100).toInt()
+                    val totalDays = ChronoUnit.DAYS.between(startDate, eventDate).toInt()
+                    val progressDay = ChronoUnit.DAYS.between(startDate, today).toInt()
+                    progress = ((progressDay) * 100 / totalDays).coerceIn(0, 100).toInt()
                     percent = "${progress}%"
                 } catch (e: Exception) {
                     e.printStackTrace() // 로그 출력

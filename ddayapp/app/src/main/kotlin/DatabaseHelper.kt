@@ -19,6 +19,7 @@ class DatabaseHelper(private val context: Context) :
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 title TEXT NOT NULL,
                 event_date TEXT NOT NULL,
+                start_date TEXT NOT NULL,
                 is_main_event INTEGER DEFAULT 0
             )
         """.trimIndent()
@@ -59,6 +60,7 @@ class DatabaseHelper(private val context: Context) :
             val values = ContentValues().apply {
                 put("title", event.title)
                 put("event_date", event.date.toString())
+                put("start_date", event.sdate.toString())
                 put("is_main_event", if (event.isMainEvent) 1 else 0)
             }
             db.insert("events", null, values)
@@ -73,6 +75,7 @@ class DatabaseHelper(private val context: Context) :
         val values = ContentValues().apply {
             put("title", event.title)
             put("event_date", event.date.toString())
+            put("start_date", event.sdate.toString())
         }
         val result = db.update("events", values, "id=?", arrayOf(event.id.toString()))
         db.close()
@@ -113,10 +116,12 @@ class DatabaseHelper(private val context: Context) :
                     val title = cursor.getString(cursor.getColumnIndexOrThrow("title"))
                     val dateString = cursor.getString(cursor.getColumnIndexOrThrow("event_date"))
                     val date = LocalDate.parse(dateString)
+                    val sdateString = cursor.getString(cursor.getColumnIndexOrThrow("start_date"))
+                    val sdate = LocalDate.parse(sdateString)
                     val isMainEvent =
                         cursor.getInt(cursor.getColumnIndexOrThrow("is_main_event")) == 1
 
-                    events.add(Event(id, title, date, isMainEvent))
+                    events.add(Event(id, title, date, sdate, isMainEvent))
                 } while (cursor.moveToNext())
             }
         } finally {
@@ -178,31 +183,7 @@ class DatabaseHelper(private val context: Context) :
         }
     }
 
-    fun saveEventForWidget(widgetId: Int, title: String, date: LocalDate) {
-        val db = writableDatabase
-        db.execSQL(
-            "INSERT OR REPLACE INTO events (widget_id, title, date) VALUES (?, ?, ?)",
-            arrayOf(widgetId, title, date.toString())
-        )
-        db.close()
-    }
 
-    fun getEventByWidgetId(id: Int): Event? {
-        val db = readableDatabase
-        val cursor: Cursor = db.rawQuery("SELECT title, event_date FROM events WHERE id = ?", arrayOf(id.toString()))
-
-        var event: Event? = null
-        if (cursor.moveToFirst()) {
-            val title = cursor.getString(0)
-            val dateString = cursor.getString(1)
-            val date = LocalDate.parse(dateString, DateTimeFormatter.ISO_LOCAL_DATE)
-            event = Event(id, title, date)
-        }
-
-        cursor.close()
-        db.close()
-        return event
-    }
 
     companion object {
         private const val DATABASE_NAME = "events.db"

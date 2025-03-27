@@ -59,6 +59,7 @@ class ExampleAppWidgetConfigure : AppCompatActivity() {
                         putInt("widget_$appWidgetId", selectedEventId)
                         putString("widget_${appWidgetId}_title", selectedEvent.title)
                         putString("widget_${appWidgetId}_date", selectedEvent.date?.toString() ?: LocalDate.now().toString()) // 기본값 추가
+                        putString("widget_${appWidgetId}_sdate", selectedEvent.sdate?.toString() ?: LocalDate.now().toString())
                         apply()
                     }
                 }

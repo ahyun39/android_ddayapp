@@ -47,8 +47,9 @@ class EventAdapter(
 
         holder.dday.text = if (daysLeft >= 0) "D-$daysLeft" else "D+${-daysLeft}"
 
-        val totalDays = ChronoUnit.DAYS.between(event.date.minusDays(100), event.date).toInt()
-        val progress = ((100 - daysLeft) * 100 / totalDays).coerceIn(0, 100)
+        val totalDays = ChronoUnit.DAYS.between(event.sdate, event.date).toInt()
+        val progressDay = ChronoUnit.DAYS.between(event.sdate, currentDate).toInt()
+        val progress = ((progressDay) * 100 / totalDays).coerceIn(0, 100)
 
         holder.progressBar.progress = progress
         holder.progressPercentage.text = "$progress%"
