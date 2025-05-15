@@ -113,6 +113,38 @@ D-Day Application은 사용자가 중요한 일정과 기념일을 쉽게 관리
 </p>
 
 
+## ERD
+
+```
+
+┌───────────────────────────┐             ┌────────────────────────────┐
+│         events            │             │      selected_events       │
+├───────────────────────────┤             ├────────────────────────────┤
+│ id (PK)                   │◄────────────┤ event_id (FK → events.id)  │
+│ title                     │             │ id (PK)                    │
+│ event_date                │             │ is_main_event              │
+│ start_date                │             └────────────────────────────┘
+│ is_main_event             │
+└───────────────────────────┘
+
+```
+
+<br>
+
+TABLE : `events`
+- `id(PK)` : INT
+- `title` : VARCHAR, NOT NULL, 이벤트 제목
+- `event_date` : DATETIME,  NOT NULL, 이벤트 날짜
+- `start_date` : DATETIME,  NOT NULL, 시작 날짜
+- `is_main_event` : BOOLEAN, 대표 일정 여부
+
+<br>
+
+TABLE : `selected_events`
+- `id(PK)` : INT
+- `event_id(FK)` : INT
+- `is_main_event` : BOOLEAN, 대표 일정 여부
+
 
 
 <br><br>
